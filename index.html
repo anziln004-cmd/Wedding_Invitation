@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#092d26">
+  <meta name="description" content="The Nikah ceremony of Al Ameen and Muhsina — 13 December 2026, Kollam.">
+  <title>Al Ameen & Muhsina | Nikah Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #082d25;
+      --green2: #104438;
+      --gold: #d6b56f;
+      --gold-light: #f0dca8;
+      --cream: #f8f1df;
+      --muted: #d7cfb9;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--cream); background: #061e19;
+      font-family: "DM Sans", sans-serif;
+    }
+    .outer {
+      min-height: 100vh; padding: 22px;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(214,181,111,.12), transparent 42%),
+        linear-gradient(145deg, #061e19, #0b332a 52%, #061e19);
+    }
+    .invitation {
+      max-width: 820px; margin: 0 auto; position: relative; overflow: hidden;
+      border: 1px solid rgba(214,181,111,.8);
+      background:
+        radial-gradient(circle at 50% 35%, rgba(24,83,66,.42), transparent 48%),
+        linear-gradient(155deg, #0b352b, #071f1a 70%);
+      box-shadow: 0 22px 70px rgba(0,0,0,.35);
+    }
+    .invitation:before {
+      content: ""; position: absolute; inset: 9px; border: 1px solid rgba(214,181,111,.38);
+      pointer-events: none; z-index: 2;
+    }
+    .pattern {
+      position: absolute; inset: 0; opacity: .12; pointer-events: none;
+      background-image:
+        linear-gradient(30deg, transparent 47%, var(--gold) 48%, transparent 49%),
+        linear-gradient(150deg, transparent 47%, var(--gold) 48%, transparent 49%),
+        linear-gradient(90deg, transparent 47%, var(--gold) 48%, transparent 49%);
+      background-size: 58px 58px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+    .content { position: relative; z-index: 1; text-align: center; padding: 54px 8% 42px; }
+    .topline { color: var(--gold-light); text-transform: uppercase; letter-spacing: .32em; font-size: 9px; }
+    .bismillah {
+      font-family: "Amiri", serif; color: var(--gold); font-size: clamp(28px, 5vw, 40px);
+      margin: 16px 0 4px; direction: rtl;
+    }
+    .blessing { font-family: "Cormorant Garamond", serif; font-size: 19px; color: var(--gold-light); font-style: italic; }
+    .divider { display: flex; align-items: center; justify-content: center; gap: 13px; margin: 25px 0; color: var(--gold); }
+    .divider:before, .divider:after { content: ""; width: 72px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+    .divider:after { transform: rotate(180deg); }
+    .diamond { font-size: 16px; }
+    .family { font-family: "Cormorant Garamond", serif; font-size: 22px; line-height: 1.25; color: var(--cream); }
+    .family-address { color: var(--muted); font-size: 11px; line-height: 1.8; margin-top: 5px; }
+    .invite-copy { max-width: 520px; margin: 27px auto 18px; color: var(--muted); font-family: "Cormorant Garamond", serif; font-size: 20px; line-height: 1.5; }
+    .couple-label { text-transform: uppercase; letter-spacing: .28em; color: var(--gold); font-size: 9px; margin: 24px 0 12px; }
+    .name {
+      font-family: "Cormorant Garamond", serif; font-size: clamp(48px, 9vw, 76px);
+      font-weight: 500; line-height: .92; color: var(--gold-light);
+      text-shadow: 0 2px 22px rgba(214,181,111,.13);
+    }
+    .amp { font-family: "Amiri", serif; color: var(--gold); font-size: 34px; margin: 9px 0; }
+    .family-notes { color: var(--muted); font-size: 11px; line-height: 1.7; margin: 10px auto 0; max-width: 520px; }
+    .family-notes strong { color: var(--cream); font-weight: 500; }
+    .dua { font-family: "Amiri", serif; color: var(--gold); font-size: 25px; margin: 21px 0 0; }
+    .details {
+      display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 0;
+      border-top: 1px solid rgba(214,181,111,.65); border-bottom: 1px solid rgba(214,181,111,.65);
+      margin: 36px auto 28px; padding: 22px 0;
+    }
+    .detail { padding: 0 12px; }
+    .detail + .detail { border-left: 1px solid rgba(214,181,111,.65); }
+    .icon { font-size: 23px; color: var(--gold); margin-bottom: 10px; }
+    .detail-label { color: var(--gold); text-transform: uppercase; letter-spacing: .17em; font-size: 9px; }
+    .detail h2 { font-family: "Cormorant Garamond", serif; font-size: 25px; font-weight: 500; margin: 7px 0 5px; color: var(--cream); }
+    .detail p { color: var(--muted); font-size: 11px; line-height: 1.7; margin: 0; }
+    .highlight { color: var(--gold-light); }
+    .venue-name { font-family: "Cormorant Garamond", serif; font-size: 22px; color: var(--cream); line-height: 1.15; margin: 8px 0 4px; }
+    .sharing { color: var(--muted); font-family: "Cormorant Garamond", serif; font-size: 19px; line-height: 1.45; margin-top: 26px; }
+    .sharing strong { color: var(--gold-light); font-weight: 500; }
+    .buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 27px 0 5px; }
+    .btn {
+      color: var(--gold-light); text-decoration: none; border: 1px solid var(--gold);
+      padding: 12px 18px; font-size: 9px; text-transform: uppercase; letter-spacing: .16em;
+      transition: .25s ease;
+    }
+    .btn.primary { background: var(--gold); color: var(--green); }
+    .btn:hover { transform: translateY(-2px); background: var(--gold-light); color: var(--green); }
+    .footer { color: rgba(240,220,168,.65); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; margin-top: 32px; }
+    .corner { position: absolute; color: var(--gold); opacity: .8; font-size: 38px; line-height: 1; }
+    .tl { top: 22px; left: 24px; } .tr { top: 22px; right: 24px; transform: scaleX(-1); }
+    .bl { bottom: 22px; left: 24px; transform: scaleY(-1); } .br { bottom: 22px; right: 24px; transform: scale(-1); }
+    @media (max-width: 600px) {
+      .outer { padding: 8px; }
+      .content { padding: 48px 7% 35px; }
+      .details { grid-template-columns: 1fr; max-width: 330px; padding: 8px 0; }
+      .detail { padding: 17px 10px; }
+      .detail + .detail { border-left: 0; border-top: 1px solid rgba(214,181,111,.45); }
+      .corner { font-size: 27px; }
+      .tl, .bl { left: 17px; } .tr, .br { right: 17px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <main class="outer">
+    <article class="invitation">
+      <div class="pattern" aria-hidden="true"></div>
+      <span class="corner tl" aria-hidden="true">۞</span>
+      <span class="corner tr" aria-hidden="true">۞</span>
+      <span class="corner bl" aria-hidden="true">۞</span>
+      <span class="corner br" aria-hidden="true">۞</span>
+
+      <div class="content">
+        <div class="topline">A blessed beginning · Nikah invitation</div>
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+        <div class="blessing">With the blessings of Almighty Allah</div>
+        <div class="divider"><span class="diamond">✧</span></div>
+
+        <div class="family">Mr. Salim &amp; Mrs. Shahida Beevi</div>
+        <div class="family-address">Noor Aashiyana<br>Kalang Jn., Perumpuzha P.O., Kollam<br>Ph: 9746151798 · 9562038464</div>
+
+        <p class="invite-copy">Cordially invite you to attend and bless the auspicious occasion of the Nikah ceremony of their son</p>
+
+        <div class="name">Al Ameen</div>
+        <div class="family-notes">
+          <strong>(Grand S/o Late Ismayil Kunju &amp; Late Hamsath Beevi<br>
+          &amp; Late Mydheen Kunju &amp; Mrs Pathumma Beevi)</strong>
+        </div>
+        <div class="amp">&amp;</div>
+        <div class="name">Muhsina</div>
+        <div class="family-notes">
+          <strong>D/o Mr. Shaheer &amp; Mrs. Rijila</strong><br>
+          Musthafa Manzil, Vadakkumkara, West Umayanalloor P.O., Kollam
+        </div>
+        <div class="dua">إن شاء الله</div>
+
+        <section class="details" aria-label="Wedding details">
+          <div class="detail">
+            <div class="icon">▣</div>
+            <div class="detail-label">The day</div>
+            <h2>Sunday</h2>
+            <p><span class="highlight">13 December 2026</span><br>(03 Rajab 1448)</p>
+          </div>
+          <div class="detail">
+            <div class="icon">⌖</div>
+            <div class="detail-label">The venue</div>
+            <div class="venue-name">MMJ Convention Center</div>
+            <p>Mylapore<br>Kollam</p>
+          </div>
+          <div class="detail">
+            <div class="icon">◷</div>
+            <div class="detail-label">Nikah</div>
+            <h2>11:30 am – 12:30 pm</h2>
+            <p>We would be honoured by your presence.</p>
+          </div>
+        </section>
+
+        <div class="sharing">Sharing the happiness<br><strong>Aizah &amp; Alfah</strong></div>
+
+        <div class="buttons">
+          <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=MMJ+Convention+Center+Mylapore+Kollam" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn" href="https://wa.me/919746151798?text=Assalamu%20Alaikum%2C%20thank%20you%20for%20the%20invitation.%20InshaAllah%2C%20I%20will%20attend." target="_blank" rel="noopener">Contact family</a>
+        </div>
+        <div class="footer">With duas · The families</div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
